@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MayoMile — OTR Owner-Operator Program | Apply Today</title>
+<meta name="description" content="MayoMile is an OTR owner-operator carrier built by a driver with 10 years behind the wheel. $1,700/week guaranteed pay floor, $0.67/mi overage, $1,000 sign-on bonus.">
+<link rel="icon" type="image/svg+xml" href="assets/mayomile-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-row">
+    <a href="#top" class="brand" aria-label="MayoMile home">
+      <img src="assets/mayomile-mark.svg" alt="" class="brand-mark" width="40" height="40">
+      <span class="brand-word">Mayo<span class="brand-word-accent">Mile</span></span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+      <span class="sr-only">Menu</span>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <path d="M2 5.5h18M2 11h18M2 16.5h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav">
+      <a href="#about">About</a>
+      <a href="#pay">Pay</a>
+      <a href="#requirements">Requirements</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary btn-sm nav-cta" href="mailto:apply@mayomile.com?subject=Owner-Operator%20Application">Apply Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-lane" viewBox="0 0 1440 60" preserveAspectRatio="none"><line x1="0" y1="30" x2="1440" y2="30" stroke="#FFC107" stroke-width="4" stroke-dasharray="40 28" opacity="0.35"/></svg>
+      <div class="hero-stripe"></div>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">OTR Owner-Operator Program</p>
+        <h1 class="hero-title">Own the Road.<br>Own Your Paycheck.</h1>
+        <p class="hero-sub">MayoMile is an OTR owner-operator carrier built by a driver with ten years behind the wheel — sleeper-cab freight, a straightforward pay floor, and a carrier that actually calls you back.</p>
+
+        <div class="pay-callout">
+          <p class="pay-callout-label">Weekly Pay Floor</p>
+          <p class="pay-callout-figure">$1,700<span>/week guaranteed</span></p>
+          <p class="pay-callout-detail">Covers up to 2,300 miles, plus <strong>$0.67/mi</strong> on every mile after that.</p>
+          <p class="pay-callout-fine">*Guaranteed floor requires availability for dispatch 5 of 7 days/week.</p>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="mailto:apply@mayomile.com?subject=Owner-Operator%20Application">Apply Now</a>
+          <a class="btn btn-ghost btn-lg" href="#requirements">See Requirements</a>
+        </div>
+      </div>
+
+      <div class="hero-badge-wrap reveal" aria-hidden="true">
+        <div class="sign-badge">
+          <span class="sign-badge-amount">$1,000</span>
+          <span class="sign-badge-label">Sign-On Bonus</span>
+        </div>
+        <svg class="hero-truck" viewBox="0 0 240 160" fill="none">
+          <g stroke="#FBF7EE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+            <path d="M20 120V70a6 6 0 0 1 6-6h74v56"/>
+            <path d="M100 88h34l26 22v14h-10"/>
+            <path d="M20 120h12"/>
+            <path d="M100 120h24"/>
+            <path d="M160 120h20"/>
+          </g>
+          <circle cx="56" cy="124" r="13" fill="#17140F" stroke="#FFC107" stroke-width="3"/>
+          <circle cx="146" cy="124" r="13" fill="#17140F" stroke="#FFC107" stroke-width="3"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT / MILE-MARKER BAND -->
+  <section class="stat-band" aria-label="Pay highlights">
+    <div class="wrap stat-grid">
+      <div class="stat-sign reveal">
+        <span class="stat-figure">$1,700<small>/wk</small></span>
+        <span class="stat-label">Guaranteed pay floor, up to 2,300 mi</span>
+      </div>
+      <div class="stat-sign reveal">
+        <span class="stat-figure">$0.67<small>/mi</small></span>
+        <span class="stat-label">Overage rate beyond 2,300 mi</span>
+      </div>
+      <div class="stat-sign reveal">
+        <span class="stat-figure">$1,000</span>
+        <span class="stat-label">Sign-on bonus for new operators</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="section" id="pay">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow-dark">Pay Calculator</p>
+        <h2>Know Your Number Before You Roll</h2>
+        <p class="section-sub">Slide to your typical weekly mileage and see what MayoMile pays — guaranteed floor included.</p>
+      </div>
+
+      <div class="calc-card reveal">
+        <div class="calc-controls">
+          <div class="calc-slider-row">
+            <span class="calc-slider-label">Weekly miles</span>
+            <span class="calc-slider-value" id="milesValue">2,300 mi</span>
+          </div>
+          <input type="range" min="1500" max="3500" step="50" value="2300" id="milesSlider" class="calc-slider" aria-describedby="calcNote">
+          <div class="calc-slider-ticks" aria-hidden="true">
+            <span>1,500 mi</span>
+            <span>2,300 mi floor</span>
+            <span>3,500 mi</span>
+          </div>
+
+          <dl class="calc-breakdown">
+            <div><dt>Guaranteed weekly floor</dt><dd>$1,700.00</dd></div>
+            <div><dt>Overage miles (&gt; 2,300)</dt><dd id="overageMiles">0 mi</dd></div>
+            <div><dt>Overage pay rate</dt><dd>$0.67 / mi</dd></div>
+          </dl>
+        </div>
+
+        <div class="calc-result">
+          <p class="calc-result-label">Estimated Weekly Pay</p>
+          <p class="calc-result-figure" id="weeklyTotal">$1,700.00</p>
+          <p class="calc-result-annual"><span id="annualTotal">$88,400.00</span> est. annualized (52 wks)</p>
+          <a class="btn btn-primary btn-block" href="mailto:apply@mayomile.com?subject=Owner-Operator%20Application">Apply Now</a>
+          <p class="calc-note" id="calcNote">Estimate assumes the $1,700 weekly floor, which requires availability for dispatch 5 of 7 days. Actual settlements vary by lane, fuel surcharge, and your lease agreement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + BENEFITS -->
+  <section class="section section-cream" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow-dark">About MayoMile</p>
+        <h2>New Company. Not New to the Road.</h2>
+        <p>MayoMile launched in 2025 — but the person behind it didn't start in an office, they started in the driver's seat. Ten years of OTR experience shaped a simple idea: give owner-operators a real pay floor, sleeper-cab equipment worth driving, and a carrier that treats you like a partner, not a load number.</p>
+        <p>We're small on purpose. That means decisions get made by people who've actually sat where you sit — not a call center reading from a script.</p>
+
+        <div class="about-stats">
+          <div><span>2025</span><small>Founded</small></div>
+          <div><span>10 yrs</span><small>Founder's OTR experience</small></div>
+          <div><span>100%</span><small>Sleeper-cab fleet</small></div>
+        </div>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit-card reveal">
+          <span class="benefit-num">1</span>
+          <h3>Guaranteed Pay Floor</h3>
+          <p>$1,700/week minimum when you're available for dispatch 5 of 7 days — know your number before you leave the yard.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <span class="benefit-num">2</span>
+          <h3>$1,000 Sign-On Bonus</h3>
+          <p>A straightforward bonus for new owner-operators who qualify and get rolling with MayoMile.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <span class="benefit-num">3</span>
+          <h3>Sleeper-Cab Equipment</h3>
+          <p>We run OTR sleeper cabs built for the miles, not local delivery vans dressed up for the highway.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <span class="benefit-num">4</span>
+          <h3>Driver-Led Program</h3>
+          <p>Built by someone who's logged the miles. Clear expectations, no dispatch illusions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUIREMENTS -->
+  <section class="section section-dark" id="requirements">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Requirements</p>
+        <h2 class="on-dark">Owner-Operator Minimum Requirements</h2>
+        <p class="section-sub on-dark-sub">We run a tight, DOT-compliant program. Review every category below before you apply — MayoMile evaluates qualification on a case-by-case basis.</p>
+      </div>
+
+      <div class="req-grid">
+        <div class="req-card reveal">
+          <h3>Age &amp; License</h3>
+          <ul class="check-list">
+            <li>At least 23 years of age</li>
+            <li>Class A CDL — or Class B CDL for Expedited operations — with HazMat (H) or combination (X) endorsement</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <h3>Driving Record <small>(previous 36 months)</small></h3>
+          <ul class="check-list">
+            <li>No more than two at-fault accidents and two moving violations — or no more than one at-fault accident and three moving violations</li>
+            <li>No preventable DOT-recordable accident within the past 12 months</li>
+            <li>No license suspension exceeding 30 days for moving violations</li>
+            <li>No more than one serious violation under FMCSR §383.51 Table 2</li>
+            <li>No railroad-highway grade-crossing offenses under FMCSR §383.51 Table 3</li>
+            <li>No citations or convictions for reckless driving or careless endangerment</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <h3>Experience</h3>
+          <ul class="check-list">
+            <li>At least 1 year verifiable OTR experience within the past 3 years, or 2 years within the past 5 years</li>
+            <li>Expedited operations: minimum 6 months verifiable OTR experience may be accepted</li>
+            <li>Experience must be on equipment comparable to what you'll operate with MayoMile</li>
+          </ul>
+        </div>
+
+        <div class="req-card reveal">
+          <h3>Background &amp; Legal</h3>
+          <ul class="check-list">
+            <li>No felony convictions within the past 7 years (other charges reviewed case-by-case)</li>
+            <li>No positive drug or alcohol tests — SAP program completion does not waive this requirement</li>
+            <li>No DUI charges within the past 60 months in a personal or non-commercial vehicle; CMV DUI charges or convictions are never permitted</li>
+            <li>Sufficient English proficiency to read signage, respond to official inquiries, complete reports, and communicate with the public</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="req-notice reveal">These are minimum owner-operator qualification standards and remain subject to all applicable DOT requirements. MayoMile may impose additional or more stringent requirements at its discretion. Qualification decisions are made by MayoMile on a case-by-case basis.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="section section-cream-dim">
+    <div class="wrap">
+      <div class="testimonial-card reveal">
+        <svg class="quote-mark" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V20.9C0 8.3 7.4.7 19.9 0v7.4c-6 .7-9.4 4-9.7 9h9.7V36H0Zm26.9 0V20.9C26.9 8.3 34.3.7 46.8 0v7.4c-6 .7-9.4 4-9.7 9h9.7V36H26.9Z" fill="#FFC107"/></svg>
+        <p class="testimonial-quote">MayoMile treats you like a partner, not a number. I know what my week looks like before I even leave the yard — that's rare in this industry.</p>
+        <div class="testimonial-attr">
+          <span class="testimonial-avatar">MR</span>
+          <span>
+            <strong>Marcus R.</strong>
+            <small>OTR Owner-Operator</small>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-dark" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Get Started</p>
+        <h2 class="on-dark">Ready to Roll?</h2>
+        <p class="section-sub on-dark-sub">Send your application and we'll follow up to talk routes, equipment, and rates.</p>
+
+        <a class="btn btn-primary btn-lg" href="mailto:apply@mayomile.com?subject=Owner-Operator%20Application">Apply via Email</a>
+
+        <div class="contact-info">
+          <div>
+            <span class="contact-info-label">Applications</span>
+            <a href="mailto:apply@mayomile.com">apply@mayomile.com</a>
+          </div>
+          <div>
+            <span class="contact-info-label">General Inquiries</span>
+            <a href="mailto:info@mayomile.com">info@mayomile.com</a>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="fName">Full name</label>
+          <input type="text" id="fName" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-row form-row-split">
+          <div>
+            <label for="fPhone">Phone</label>
+            <input type="tel" id="fPhone" name="phone" autocomplete="tel" required>
+          </div>
+          <div>
+            <label for="fEmail">Email</label>
+            <input type="email" id="fEmail" name="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="form-row form-row-split">
+          <div>
+            <label for="fCdl">CDL class</label>
+            <select id="fCdl" name="cdl">
+              <option value="Class A CDL">Class A CDL</option>
+              <option value="Class B CDL (Expedited)">Class B CDL (Expedited)</option>
+              <option value="Other / Permit">Other / Permit</option>
+            </select>
+          </div>
+          <div>
+            <label for="fExp">Years of OTR experience</label>
+            <select id="fExp" name="experience">
+              <option value="Less than 1 year">Less than 1 year</option>
+              <option value="1-3 years">1 – 3 years</option>
+              <option value="3-5 years">3 – 5 years</option>
+              <option value="5+ years">5+ years</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Application</button>
+        <p class="form-note">This opens your email app with your details filled in — hit send there to reach our team at apply@mayomile.com.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <a href="#top" class="brand brand-footer" aria-label="MayoMile home">
+      <img src="assets/mayomile-mark.svg" alt="" class="brand-mark" width="32" height="32">
+      <span class="brand-word">Mayo<span class="brand-word-accent">Mile</span></span>
+    </a>
+    <p class="footer-tagline">OTR owner-operator carrier. Founded 2025.</p>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#pay">Pay</a>
+      <a href="#requirements">Requirements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-emails">
+      <a href="mailto:apply@mayomile.com">apply@mayomile.com</a>
+      <a href="mailto:info@mayomile.com">info@mayomile.com</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; <span id="year"></span> MayoMile. All rights reserved.</p>
+    <p class="footer-fine">Pay figures are program guidelines contingent on dispatch availability and are subject to change. See full qualification standards above.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
