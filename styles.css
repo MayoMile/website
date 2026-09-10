@@ -194,6 +194,31 @@ input, select { font: inherit; }
   .nav-cta { margin: var(--space-4) 0 0; text-align: center; }
 }
 
+/* ===== Trust banner ===== */
+.trust-banner {
+  background: var(--cream-dim);
+  border-bottom: 1px solid var(--line-light);
+  padding: 0.6rem 0;
+}
+.trust-banner-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+.flag-icon {
+  flex-shrink: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(23, 20, 15, 0.18);
+}
+.trust-banner-row span {
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
 /* ===== Section scaffolding ===== */
 .section { padding: var(--space-9) 0; }
 .section-cream { background: var(--cream); }
