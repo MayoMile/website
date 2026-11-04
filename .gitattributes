@@ -1,0 +1,12 @@
+# Keep line endings consistent (LF) no matter which computer or editor touches the files
+* text=auto eol=lf
+
+# Images and fonts are binary - never touch them
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
