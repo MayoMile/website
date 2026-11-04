@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/mayomile-mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,6 +31,7 @@
     <nav class="primary-nav" id="primaryNav">
       <a href="#about">About</a>
       <a href="#pay">Pay</a>
+      <a href="#dispatching">Dispatching</a>
       <a href="#requirements">Requirements</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-primary btn-sm nav-cta" href="mailto:apply@mayomile.com?subject=Owner-Operator%20Application">Apply Now</a>
@@ -66,14 +67,15 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-bg" aria-hidden="true">
-      <svg class="hero-lane" viewBox="0 0 1440 60" preserveAspectRatio="none"><line x1="0" y1="30" x2="1440" y2="30" stroke="#FFC107" stroke-width="4" stroke-dasharray="40 28" opacity="0.35"/></svg>
+      <svg class="hero-lane" viewBox="0 0 1440 60" preserveAspectRatio="none"><line x1="0" y1="30" x2="1440" y2="30" stroke="#E5B700" stroke-width="4" stroke-dasharray="40 28" opacity="0.35"/></svg>
       <div class="hero-stripe"></div>
     </div>
     <div class="wrap hero-grid">
       <div class="hero-copy reveal">
         <p class="eyebrow">OTR Owner-Operator Program</p>
-        <h1 class="hero-title">Own the Road.<br>Own Your Paycheck.</h1>
-        <p class="hero-sub">MayoMile is an OTR owner-operator carrier built by a driver with ten years behind the wheel — sleeper-cab freight, a straightforward pay plan, and a carrier that actually calls you back.</p>
+        <h1 class="hero-title">Built by Drivers.<br><span class="hero-title-accent">Driven by Experience.</span></h1>
+        <p class="hero-sub">Operated by experienced drivers, MayoMile understands the challenges of life on the road. We believe in straightforward communication, dependable support, and building lasting relationships with the drivers we work with.</p>
+        <p class="hero-tagline">Own the Road. Own Your Paycheck.</p>
 
         <div class="pay-callout">
           <p class="pay-callout-label">Weekly Pay Plan</p>
@@ -101,8 +103,8 @@
             <path d="M100 120h24"/>
             <path d="M160 120h20"/>
           </g>
-          <circle cx="56" cy="124" r="13" fill="#17140F" stroke="#FFC107" stroke-width="3"/>
-          <circle cx="146" cy="124" r="13" fill="#17140F" stroke="#FFC107" stroke-width="3"/>
+          <circle cx="56" cy="124" r="13" fill="#292929" stroke="#E5B700" stroke-width="3"/>
+          <circle cx="146" cy="124" r="13" fill="#292929" stroke="#E5B700" stroke-width="3"/>
         </svg>
       </div>
     </div>
@@ -127,7 +129,7 @@
   </section>
 
   <!-- CALCULATOR -->
-  <section class="section" id="pay">
+  <section class="section section-cream" id="pay">
     <div class="wrap">
       <div class="section-head reveal">
         <p class="eyebrow eyebrow-dark">Pay Calculator</p>
@@ -167,7 +169,7 @@
   </section>
 
   <!-- ABOUT + BENEFITS -->
-  <section class="section section-cream" id="about">
+  <section class="section section-white" id="about">
     <div class="wrap about-grid">
       <div class="reveal">
         <p class="eyebrow eyebrow-dark">About MayoMile</p>
@@ -207,13 +209,48 @@
     </div>
   </section>
 
+  <!-- DISPATCHING SERVICES -->
+  <div class="section-divider" aria-hidden="true"></div>
+  <section class="section section-cream" id="dispatching">
+    <div class="wrap dispatch-grid">
+      <div class="reveal">
+        <p class="eyebrow">New Service</p>
+        <h2>Professional Truck Dispatching</h2>
+        <p class="dispatch-price"><strong>$99</strong> / Week / Truck</p>
+        <p class="dispatch-copy">Keep your truck moving while you focus on the road. MayoMile offers straightforward dispatching support at a simple weekly rate of $99 per truck.</p>
+
+        <h3 class="service-heading">Dispatch support can include</h3>
+        <ul class="service-list">
+          <li><span class="service-num" aria-hidden="true">01</span>Load Search &amp; Coordination</li>
+          <li><span class="service-num" aria-hidden="true">02</span>Broker Communication</li>
+          <li><span class="service-num" aria-hidden="true">03</span>Rate Negotiation Support</li>
+          <li><span class="service-num" aria-hidden="true">04</span>Route &amp; Load Planning</li>
+          <li><span class="service-num" aria-hidden="true">05</span>Rate Confirmation Coordination</li>
+          <li><span class="service-num" aria-hidden="true">06</span>Dispatch Communication &amp; Support</li>
+        </ul>
+        <p class="dispatch-fine">Service details are confirmed with each carrier before dispatching begins.</p>
+      </div>
+
+      <aside class="price-card reveal" aria-labelledby="priceCardTitle">
+        <p class="price-card-head" id="priceCardTitle">MayoMile Dispatching</p>
+        <div class="price-card-body">
+          <p class="price-card-figure" aria-label="99 dollars"><sup aria-hidden="true">$</sup><span aria-hidden="true">99</span></p>
+          <p class="price-card-unit">Per Week / Per Truck</p>
+          <hr class="price-card-rule">
+          <p class="price-card-tagline">Straightforward dispatching support. Simple weekly pricing.</p>
+          <a class="btn btn-primary btn-lg btn-block" href="#contact" data-inquiry="dispatching">Inquire About Dispatching</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
   <!-- REQUIREMENTS -->
-  <section class="section section-dark" id="requirements">
+  <section class="section section-cream" id="requirements">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">Requirements</p>
-        <h2 class="on-dark">Owner-Operator Minimum Requirements</h2>
-        <p class="section-sub on-dark-sub">We run a tight, DOT-compliant program. Review every category below before you apply — MayoMile evaluates qualification on a case-by-case basis.</p>
+        <p class="eyebrow eyebrow-dark">Requirements</p>
+        <h2>Owner-Operator Minimum Requirements</h2>
+        <p class="section-sub">We run a tight, DOT-compliant program. Review every category below before you apply — MayoMile evaluates qualification on a case-by-case basis.</p>
       </div>
 
       <div class="req-grid">
@@ -263,10 +300,10 @@
   </section>
 
   <!-- TESTIMONIAL -->
-  <section class="section section-cream-dim">
+  <section class="section section-white">
     <div class="wrap">
       <div class="testimonial-card reveal">
-        <svg class="quote-mark" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V20.9C0 8.3 7.4.7 19.9 0v7.4c-6 .7-9.4 4-9.7 9h9.7V36H0Zm26.9 0V20.9C26.9 8.3 34.3.7 46.8 0v7.4c-6 .7-9.4 4-9.7 9h9.7V36H26.9Z" fill="#FFC107"/></svg>
+        <svg class="quote-mark" viewBox="0 0 48 36" aria-hidden="true"><path d="M0 36V20.9C0 8.3 7.4.7 19.9 0v7.4c-6 .7-9.4 4-9.7 9h9.7V36H0Zm26.9 0V20.9C26.9 8.3 34.3.7 46.8 0v7.4c-6 .7-9.4 4-9.7 9h9.7V36H26.9Z" fill="#D4A017"/></svg>
         <p class="testimonial-quote">MayoMile treats you like a partner, not a number. I know what my week looks like before I even leave the yard — that's rare in this industry.</p>
         <div class="testimonial-attr">
           <span class="testimonial-avatar">MR</span>
@@ -285,7 +322,7 @@
       <div class="reveal">
         <p class="eyebrow">Get Started</p>
         <h2 class="on-dark">Ready to Roll?</h2>
-        <p class="section-sub on-dark-sub">Send your application and we'll follow up to talk routes, equipment, and rates.</p>
+        <p class="section-sub on-dark-sub">Send your application and we'll follow up to talk routes, equipment, and rates. Interested in dispatching instead? Choose <strong>Dispatching Services</strong> in the form.</p>
 
         <a class="btn btn-primary btn-lg" href="mailto:apply@mayomile.com?subject=Owner-Operator%20Application">Apply via Email</a>
 
@@ -302,6 +339,13 @@
       </div>
 
       <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row inquiry-row">
+          <label for="fInquiry">I'm interested in</label>
+          <select id="fInquiry" name="inquiry">
+            <option value="application">Owner-Operator Program</option>
+            <option value="dispatching">Dispatching Services</option>
+          </select>
+        </div>
         <div class="form-row">
           <label for="fName">Full name</label>
           <input type="text" id="fName" name="name" autocomplete="name" required>
@@ -315,6 +359,10 @@
             <label for="fEmail">Email</label>
             <input type="email" id="fEmail" name="email" autocomplete="email" required>
           </div>
+        </div>
+        <div class="form-row" id="trucksRow" hidden>
+          <label for="fTrucks">Number of trucks</label>
+          <input type="number" id="fTrucks" name="trucks" min="1" step="1" inputmode="numeric">
         </div>
         <div class="form-row form-row-split">
           <div>
@@ -334,8 +382,8 @@
             </select>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Send Application</button>
-        <p class="form-note">This opens your email app with your details filled in — hit send there to reach our team at apply@mayomile.com.</p>
+        <button type="submit" class="btn btn-primary btn-block" id="formSubmit">Send Application</button>
+        <p class="form-note" id="formNote">This opens your email app with your details filled in — hit send there to reach our team at apply@mayomile.com.</p>
       </form>
     </div>
   </section>
@@ -353,6 +401,7 @@
     <nav class="footer-nav" aria-label="Footer">
       <a href="#about">About</a>
       <a href="#pay">Pay</a>
+      <a href="#dispatching">Dispatching</a>
       <a href="#requirements">Requirements</a>
       <a href="#contact">Contact</a>
     </nav>

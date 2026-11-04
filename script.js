@@ -90,8 +90,66 @@
     updateCalculator();
   }
 
+  /* Active nav link while scrolling */
+  var navLinks = primaryNav ? primaryNav.querySelectorAll('a[href^="#"]:not(.btn)') : [];
+  if (navLinks.length && "IntersectionObserver" in window) {
+    var linkFor = {};
+    navLinks.forEach(function (a) { linkFor[a.getAttribute("href").slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (a) { a.classList.remove("is-active"); a.removeAttribute("aria-current"); });
+        var link = linkFor[entry.target.id];
+        if (link) { link.classList.add("is-active"); link.setAttribute("aria-current", "true"); }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    Object.keys(linkFor).forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec) spy.observe(sec);
+    });
+  }
+
   /* Contact form -> mailto */
   var form = document.getElementById("contactForm");
+
+  /* Inquiry type: owner-operator application (default) or dispatching */
+  var INQUIRY = {
+    application: {
+      to: "apply@mayomile.com",
+      button: "Send Application",
+      note: "This opens your email app with your details filled in — hit send there to reach our team at apply@mayomile.com."
+    },
+    dispatching: {
+      to: "info@mayomile.com",
+      button: "Send Dispatching Inquiry",
+      note: "This opens your email app with your details filled in — hit send there to reach our team at info@mayomile.com."
+    }
+  };
+  var inquirySelect = document.getElementById("fInquiry");
+  var trucksRow = document.getElementById("trucksRow");
+  var submitBtn = document.getElementById("formSubmit");
+  var formNote = document.getElementById("formNote");
+
+  function setInquiry(type) {
+    if (!INQUIRY[type]) type = "application";
+    if (inquirySelect) inquirySelect.value = type;
+    if (trucksRow) trucksRow.hidden = type !== "dispatching";
+    if (submitBtn) submitBtn.textContent = INQUIRY[type].button;
+    if (formNote) formNote.textContent = INQUIRY[type].note;
+  }
+
+  if (inquirySelect) {
+    inquirySelect.addEventListener("change", function () { setInquiry(inquirySelect.value); });
+    setInquiry(inquirySelect.value);
+  }
+
+  /* "Inquire About Dispatching" (and any data-inquiry link) preselects the form */
+  document.querySelectorAll("[data-inquiry]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      setInquiry(link.getAttribute("data-inquiry"));
+    });
+  });
+
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -100,6 +158,24 @@
       var email = form.email.value.trim();
       var cdl = form.cdl.value;
       var experience = form.experience.value;
+
+      if (inquirySelect && inquirySelect.value === "dispatching") {
+        var trucks = form.trucks ? form.trucks.value.trim() : "";
+        var dSubject = "Dispatching Services Inquiry - " + name;
+        var dBody = [
+          "Inquiry: Dispatching Services ($99/week/truck)",
+          "Name: " + name,
+          "Phone: " + phone,
+          "Email: " + email,
+          "Number of trucks: " + (trucks || "Not provided"),
+          "CDL Class: " + cdl,
+          "OTR Experience: " + experience
+        ].join("\n");
+        window.location.href = "mailto:" + INQUIRY.dispatching.to +
+          "?subject=" + encodeURIComponent(dSubject) +
+          "&body=" + encodeURIComponent(dBody);
+        return;
+      }
 
       var subject = "Owner-Operator Application - " + name;
       var body = [
